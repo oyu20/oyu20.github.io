@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href = "style.css" media="all" type="text/css"/>
+        <link rel="stylesheet" href = "child.css" media="all" type="text/css"/>
+        <title>Anuka22</title>
+    </head>
+    <body>
+        <!-- <div class="container-fluid"> -->
+        <div class="background">
+            <div class="night">
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                <div class="shooting_star"></div>
+                </div>
+        </div>
+       <div class="bday">
+          Happy Birthday
+       </div>
+       <div class="name">
+          Anuka
+       </div>
+       <p id="timer"></p>
+       <script>
+           var CountDownDate = new Date("February 22, 2021 00:00:00").getTime();
+           var x = setInterval(function(){
+               var now = new Date().getTime();
+               var distance = CountDownDate - now;
+               var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+               var hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+               var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+               var seconds = Math.floor(distance % (1000 * 60) / (1000));
+               document.getElementById("timer").innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds + "s";
+               if(distance < 0){
+                   clearInterval(x);
+                   document.getElementById("timer").innerHTML = window.open("HB");
+                   //<meta http-equiv="refresh" content="URL='index.html'">
+               }
+           },1000);
+       </script>
+       <div class="wrapper">
+             <div class="img-area">
+                 <div class="single-img img-one">
+                     <img src="photos/4.jpg" alt="">     
+                 </div> 
+                 <div class="single-img img-two">
+                    <img src="photos/1,5.jpg" alt="">     
+                </div> 
+                <div class="single-img img-three">
+                    <img src="photos/17.JPG" alt="">     
+                </div> 
+                <div class="single-img img-four">
+                    <img src="photos/14.JPG" alt="">     
+                </div>
+                <div class="single-img img-five">
+                    <img src="photos/21.JPG" alt="">     
+                </div> 
+                <div class="single-img img-six">
+                    <img src="photos/16.JPG" alt="">     
+                </div>  
+             </div>
+       </div>
+       <section class="content">
+           <button>More photos</button>
+       </section>
+       
+        
+    </body>
+</html>
