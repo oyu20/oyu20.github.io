@@ -4,36 +4,40 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
         <link rel="stylesheet" href = "style.css" media="all" type="text/css"/>
         <link rel="stylesheet" href = "child.css" media="all" type="text/css"/>
         <title>Oyu-Erdene</title>
     </head>
     <body>
-        <!-- <div class="container-fluid"> -->
-        <div class="background">
-            <div class="night">
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
-                <div class="shooting_star"></div>
+        <audio autoplay>
+            <source src="melody.mp3" type="audio/mpeg">
+        </audio>
+        <div class="container-fluid">
+            <div class="background">
+                <div class="night">
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
+                    <div class="shooting_star"></div>
                 </div>
-        </div>
+
        <div class="bday">
           Happy Birthday
        </div>
@@ -42,7 +46,7 @@
        </div>
        <p id="timer"></p>
        <script>
-           var CountDownDate = new Date("February 14, 2023 23:59:59").getTime();
+           var CountDownDate = new Date("February 14, 2023 00:00:00").getTime();
            var x = setInterval(function(){
                var now = new Date().getTime();
                var distance = CountDownDate - now;
@@ -51,20 +55,20 @@
                var minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
                var seconds = Math.floor(distance % (1000 * 60) / (1000));
                document.getElementById("timer").innerHTML = days + "d" + hours + "h" + minutes + "m" + seconds + "s";
-               if(distance < 0){
-                   clearInterval(x);
-                   document.getElementById("timer").innerHTML = window.open("HB");
-                   //<meta http-equiv="refresh" content="URL='index.html'">
-               }
+            //    if(distance < 0){
+            //        clearInterval(x);
+            //        document.getElementById("timer").innerHTML = window.open("HB");
+            //        //<meta http-equiv="refresh" content="URL='index.html'">
+            //    }
            },1000);
        </script>
        <div class="wrapper">
              <div class="img-area">
                  <div class="single-img img-one">
-                     <img src="photos/1.jpg" alt="">     
+                     <img src="photos/15.JPG" alt="">     
                  </div> 
                  <div class="single-img img-two">
-                    <img src="photos/2.jpg" alt="">     
+                    <img src="photos/22.jpg" alt="">     
                 </div> 
                 <div class="single-img img-three">
                     <img src="photos/3.jpg" alt="">     
@@ -80,10 +84,12 @@
                 </div>  
              </div>
        </div>
+       <!-- <a href = "Photo/index.html" -->
        <section class="content">
-           <button>More photos</button>
+           <button onclick="window.location.href='Photo/index.html';">More photos</button>
        </section>
-       
-        
+       <footer>
+        <p class="copyright">From Jagaa</p>
+    </footer>
     </body>
 </html>
